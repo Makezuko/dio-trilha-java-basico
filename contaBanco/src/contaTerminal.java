@@ -1,9 +1,26 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class contaTerminal {
     public static void main(String[] args) {
-        System.out.println("Primeiro commit do projeto contaBanco");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Insira o número da sua conta: ");
+
+        int numeroConta = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Insira o nome da agência: ");
+        String nomeAgencia = scanner.nextLine();
+
+        System.out.println("Insira o nome do cliente: ");
+        String nomeCliente = scanner.nextLine();
+
+        System.out.println("Insira o seu saldo atual: ");
+
+        double saldo = scanner.nextDouble();
+
+        System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %s e seu saldo R$%.2f já está disponível para saque.", nomeCliente, nomeAgencia, numeroConta, saldo);
+
+        scanner.close();
     }
 }
